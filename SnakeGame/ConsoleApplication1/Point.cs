@@ -23,10 +23,30 @@ namespace ConsoleApplication1
             sym = _sym;
         }
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public void Move(int offset, Direction dir)
+        {
+            if (dir == Direction.right) x = x + offset;
+          else  if (dir == Direction.left) x = x - offset;
+          else  if (dir == Direction.up) y = y - offset;
+          else  if (dir == Direction.down) y = y + offset;
+        }
+
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
         }
     }
 }
