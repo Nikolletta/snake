@@ -19,23 +19,11 @@ namespace ConsoleApplication1
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
 
-            List<int> newlist = new List<int>();
-            newlist.Add(0);
-            newlist.Add(1);
-            newlist.Add(2);
+            HorLine l1 = new HorLine(5, 10, 8, '+');
+            l1.Draw();
 
-            int x = newlist[0];
-            int y = newlist[1];
-            int z = newlist[2];
-
-            foreach(int i in newlist)
-            {
-                Console.WriteLine(i);
-            }
-
-            List<Point> pList = new List<Point>;
-            pList.Add(p1);
-            pList.Add(p2);
+            VerLine v1 = new VerLine(5, 9, 12, '*');
+            v1.Draw();
 
             Console.ReadLine();
         }
