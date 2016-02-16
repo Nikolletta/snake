@@ -10,20 +10,18 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Snake_Game");
-            Console.WriteLine("");
+            Console.SetBufferSize(80, 25);
 
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw();
+            //отрисоква рамки
+            HorLine upLine = new HorLine(0, 78, 0, '+');
+            HorLine downLine = new HorLine(0, 78, 24, '+');
+            VerLine leftLine = new VerLine(0, 0, 24, '+');
+            VerLine rightLine = new VerLine(78, 0, 24, '+');
 
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw();
-
-            HorLine l1 = new HorLine(5, 10, 8, '+');
-            l1.Draw();
-
-            VerLine v1 = new VerLine(5, 9, 12, '*');
-            v1.Draw();
+            upLine.Draw();
+            downLine.Draw();
+            leftLine.Draw();
+            rightLine.Draw();
 
             Console.ReadLine();
         }

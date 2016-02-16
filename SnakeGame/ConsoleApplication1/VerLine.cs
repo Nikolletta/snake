@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class VerLine
+    class VerLine : Figure
     {
-        List<Point> pList;
         public VerLine(int x, int yTop, int yBot, char sym)
         {
             pList = new List<Point>();
@@ -16,14 +15,6 @@ namespace ConsoleApplication1
             {
                 Point p = new Point(x, y, sym);
                 pList.Add(p);
-            }
-        }
-
-        public void Draw()
-        {
-            foreach (Point p in pList)
-            {
-                p.Draw();
             }
         }
     }
