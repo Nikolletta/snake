@@ -48,5 +48,11 @@ namespace ConsoleApplication1
         {
             return x + ", " + y + ", " + sym;
         }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
+        }
     }
 }
